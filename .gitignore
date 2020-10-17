@@ -12,11 +12,12 @@ rerun.txt
 pickle-email-*.html
 
 # Ignore all logfiles and tempfiles.
+log/*
+tmp/*
 /log/*
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-log/*
 
 # TODO Comment out this rule if you are OK with secrets being uploaded to the repo
 config/initializers/secret_token.rb
@@ -73,3 +74,5 @@ yarn.lock
 
 # Ignore IDE files
 .idea
+/log/
+/tmp/.keep
