@@ -13,3 +13,11 @@
   src:font-url('SFProDisplay-Bold.ttf') format('truetype');
   src:font-url('SFProDisplay-Bold.woff') format('woff');
 }
+
+@font-face {
+  font-family:'SFProDisplay-Regular';
+  src:font-url('SFProDisplay-Regular.eot');
+  src:font-url('SFProDisplay-Regular.eot?#iefix') format('embedded-opentype');
+  src:font-url('SFProDisplay-Regular.ttf') format('truetype');
+  src:font-url('SFProDisplay-Regular.woff') format('woff');
+}
