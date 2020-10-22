@@ -1,0 +1,76 @@
+// Place all the styles related to the splash-screen controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.screen {
+  padding: 250px 0;
+
+  &-fluid {
+    position: relative;
+
+    &__bg-images {
+      width: 100%;
+      z-index: -1;
+      position: absolute;
+      bottom: 0;
+
+      &_right {
+        width: auto;
+        right: 0;
+      }
+
+      &_left {
+        width: auto;
+        left: 0;
+      }
+    }
+
+    &_full-screen {
+      min-height: 100vh;
+    }
+  }
+
+  &_padding-top {
+    padding-top: 100px;
+  }
+
+  &__title {
+    font: {
+      family: 'SFProDisplay-Medium';
+      size: 120px;
+    }
+    line-height: 100px;
+    color: #201E20;
+    margin-bottom: 70px;
+
+    &_small {
+      font-size: 80px;
+      line-height: 80px;
+      //margin-bottom: 50px;
+    }
+
+    &_orange {
+      font-family: 'SFProDisplay-Bold', serif;
+      text-transform: uppercase;
+      color: #EE7E28;
+    }
+  }
+
+  &__description {
+    font: {
+      family: 'SFProDisplay-Regular';
+      size: 50px;
+    }
+    line-height: 60px;
+    color: #4D4B49;
+
+    &_small {
+      font-size: 30px;
+      line-height: 45px;
+    }
+  }
+}
+
+.footer {
+  margin: 250px 0 10px;
+}
