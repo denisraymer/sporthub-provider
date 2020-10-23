@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  get 'splash_screen/index'
+  get 'splash-screen', to: 'splash_screen#index'
   get 'posts/index'
   get 'post/:id', to: 'posts#show'
 
