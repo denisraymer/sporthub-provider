@@ -1,7 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
         <%= link_to('/splash-screen', class: 'navbar-brand') do %>
-            <%= image_tag('logo.svg', alt: 'SportHUB') %>
+            <%= #noinspection RailsParamDefResolve
+                image_tag('logo.svg', alt: 'SportHUB') %>
         <% end %>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,7 +11,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Программы</a>
+                    <%= link_to('Программы', '/programs', class: 'nav-link') %>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
