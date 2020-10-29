@@ -2,54 +2,27 @@
     <div class="row">
         <!-- Blog Entries Column -->
         <div class="col-md-12">
-            <h1 class="my-4">Page Heading
-                <small>Secondary Text</small>
-            </h1>
+            <h1 class="my-4">Page Heading <small>Secondary Text</small></h1>
 
             <!-- Blog Post -->
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h2 class="card-title">Post Title</h2>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid
-                        atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero
-                        voluptate voluptatibus possimus, veniam magni quis!</p>
-                    <a href="#" class="btn btn-primary">Read More &rarr;</a>
+            <% @programs.each do |program| %>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title"><%= program.name %></h2>
+                        <p class="card-text"><%= program.description %></p>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped" role="progressbar"
+                                 style="width: <%= program.progress %>%" aria-valuenow="90" aria-valuemin="0"
+                                 aria-valuemax="100"></div>
+                        </div>
+                        <br>
+                        <a href="#" class="btn btn-primary">Read More &rarr;</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Posted on <%= program.created_at %> by <%= program.author %>
+                    </div>
                 </div>
-                <div class="card-footer text-muted">
-                    Posted on January 1, 2020 by
-                    <a href="#">Start Bootstrap</a>
-                </div>
-            </div>
-
-            <!-- Blog Post -->
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h2 class="card-title">Post Title</h2>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid
-                        atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero
-                        voluptate voluptatibus possimus, veniam magni quis!</p>
-                    <a href="#" class="btn btn-primary">Read More &rarr;</a>
-                </div>
-                <div class="card-footer text-muted">
-                    Posted on January 1, 2020 by
-                    <a href="#">Start Bootstrap</a>
-                </div>
-            </div>
-
-            <!-- Blog Post -->
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h2 class="card-title">Post Title</h2>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid
-                        atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero
-                        voluptate voluptatibus possimus, veniam magni quis!</p>
-                    <a href="#" class="btn btn-primary">Read More &rarr;</a>
-                </div>
-                <div class="card-footer text-muted">
-                    Posted on January 1, 2020 by
-                    <a href="#">Start Bootstrap</a>
-                </div>
-            </div>
+            <% end %>
 
             <!-- Pagination -->
             <ul class="pagination justify-content-center mb-4">
