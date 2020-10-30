@@ -1,8 +1,10 @@
 class ProgramsController < ApplicationController
   def index
     @programs = Program.all
+  end
 
-    render body: @programs.map { |program| "#{program.name} | #{program.progress} | #{program.category}" }
+  def create
+    render body: 'created'
   end
 
   def show
