@@ -11,7 +11,7 @@ class ProgramsController < ApplicationController
     if program.persisted?
       render json: 'Created a program: ' + program.name, status: :created
     else
-      render json: 'Error during creation: ' + program.errors, status: :unprocessable_entity
+      render json: 'Error during creation: ', status: :unprocessable_entity
     end
   end
 
