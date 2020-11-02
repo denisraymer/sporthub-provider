@@ -15,6 +15,10 @@ class ProgramsController < ApplicationController
     end
   end
 
+  def show
+    @program = Program.where(id: params[:id]).first
+  end
+
   private
 
   def programs_params
