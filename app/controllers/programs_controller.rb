@@ -16,7 +16,9 @@ class ProgramsController < ApplicationController
   end
 
   def show
-    @program = Program.where(id: params[:id]).first
+    unless (@program = Program.where(id: params[:id]).first)
+      render body: 'Page not found', status: 404
+    end
   end
 
   private
